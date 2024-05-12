@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuesta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Encuestas</h1>
+    <div id="encuestas"></div>
+    <div id="nueva-encuesta">
+      <h2>Nueva Encuesta</h2>
+      <input type="text" id="pregunta" placeholder="Pregunta">
+      <input type="text" id="opciones" placeholder="Opciones separadas por coma">
+      <button onclick="crearEncuesta(document.getElementById('pregunta').value, document.getElementById('opciones').value)">Crear Encuesta</button>
+    </div>
+  </div>
+
+  <script src="SistemaVotacionPf.js"></script>
+</body>
+</html>
