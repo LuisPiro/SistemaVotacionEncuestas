@@ -35,6 +35,7 @@ eliminarEncuesta();
 
 A continuacion se muestra un fragmento de codigo de ejemplo que ilustra como crear una nueva encuesta:
 
+``` javaScript
 // Crear una nueva encuesta
 function crearEncuesta() {
 let nombreEncuesta = prompt("Ingrese el nombre de la encuesta:");
@@ -77,6 +78,7 @@ let nombreEncuesta = prompt("Ingrese el nombre de la encuesta:");
     encuestas.push(nuevaEncuesta);
     console.log("Encuesta creada exitosamente.");
 }
+```
 
 ##Contribuciones
 
