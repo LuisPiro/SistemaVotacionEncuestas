@@ -15,17 +15,17 @@ let encuestaPredeterminada = {
     ]
 };
 
-encuestas.push(encuestaPredeterminada);
+encuestas.push(encuestaPredeterminada); // Subir la encuesta predeterminada.
 
 //Function para crear encuesta
-function crearEncuesta() {
+function crearEncuesta() { // Crear una nueva encuesta desde 0.
     let nombreEncuesta = prompt("Ingrese el nombre de la encuesta:");
-    let nuevaEncuesta = {
+    let nuevaEncuesta = { // Almacena la encuesta con su nombre y las preguntas.
         nombre: nombreEncuesta,
         preguntas: []
     };
 
-    let cantPreguntas;
+    let cantPreguntas; // Para ingresar la cantidad de preguntas que tiene tu nueva encuesta.
     while (true) {
         cantPreguntas = parseInt(prompt("Ingrese la cantidad de preguntas para la nueva encuesta:"));
         if (!isNaN(cantPreguntas) && cantPreguntas > 0) {
@@ -35,7 +35,7 @@ function crearEncuesta() {
     }
 
     for (let i = 0; i < cantPreguntas; i++) {
-        let pregunta;
+        let pregunta; // Ingresar cada pregunta.
         while (true) {
             pregunta = prompt(`Ingrese la pregunta ${i + 1}:`);
             if (pregunta) {
@@ -44,23 +44,23 @@ function crearEncuesta() {
             console.log("La pregunta no puede estar vacía.");
         }
 
-        let opciones;
+        let opciones; // Ingresar las opciones para cada pregunta.
         while (true) {
             opciones = prompt("Ingrese las opciones separadas por comas:").split(",");
-            if (opciones.length >= 2) {
+            if (opciones.length >= 2) { // No pueden ser menos de 2 opciones.
                 break;
             }
             console.log("Debe ingresar al menos dos opciones.");
         }
 
-        nuevaEncuesta.preguntas.push({ pregunta, opciones, votos: Array(opciones.length).fill(0) });
+        nuevaEncuesta.preguntas.push({ pregunta, opciones, votos: Array(opciones.length).fill(0) }); // Subir los datos de la nueva encuesta.
     }
 
-    encuestas.push(nuevaEncuesta);
+    encuestas.push(nuevaEncuesta); // Subir la encuesta completa.
     console.log("Encuesta creada exitosamente.");
 }
 
-// Function para mostrar todas las encuestas.
+// Function para mostrar todas las encuestas, siempre que hayan encuestas disponibles.
 function mostrarEncuestas() {
   if (encuestas.length === 0) {
       console.log("No hay encuestas disponibles.");
@@ -78,24 +78,24 @@ function votarEncuesta() {
       console.log("No hay encuestas disponibles para votar.");
       return;
   }
-  mostrarEncuestas();
+  mostrarEncuestas(); // Te muestra las encuestas disponibles para elegir en cual quieres votar.
   let encuestaIndex = parseInt(prompt("Ingrese el numero de la encuesta en la que desea votar:")) - 1;
   if (isNaN(encuestaIndex) || encuestaIndex < 0 || encuestaIndex >= encuestas.length) {
       console.log("Ingrese un numero valido de encuesta.");
       return;
   }
-  let encuesta = encuestas[encuestaIndex];
+  let encuesta = encuestas[encuestaIndex]; // muestra la encuesta que eliges y las opciones para votar en cada pregunta.
   console.log(`Encuesta: ${encuesta.nombre}`);
   console.log("Seleccione sus respuestas (a, b, c, etc.):");
   encuesta.preguntas.forEach((pregunta, index) => {
       console.log(`Pregunta ${index + 1}: ${pregunta.pregunta}`);
       pregunta.opciones.forEach((opcion, index) => {
-          console.log(`   ${String.fromCharCode(97 + index)}. ${opcion}`);
+          console.log(`   ${String.fromCharCode(97 + index)}. ${opcion}`); // 97 es el valor de codigo unicode para la letra "a".
       });
       let voto = prompt("Respuesta:");
-      let votoIndex = voto.charCodeAt(0) - 97;
+      let votoIndex = voto.charCodeAt(0) - 97; // 97 es el valor de codigo unicode para la letra "a".
       if (!isNaN(votoIndex) && votoIndex >= 0 && votoIndex < pregunta.opciones.length) {
-          pregunta.votos[votoIndex]++;
+          pregunta.votos[votoIndex]++; // Registra tu voto agregando 1 a la opcion elegida.
           console.log("Voto registrado correctamente.");
       } else {
           console.log("Respuesta invalida, voto no registrado.");
@@ -109,13 +109,13 @@ function mostrarResultados() {
       console.log("No hay encuestas disponibles para mostrar resultados.");
       return;
   }
-  mostrarEncuestas();
+  mostrarEncuestas(); // Te muestra todas las encuestas para que elijas de cual quieres sus resultados.
   let encuestaIndex = parseInt(prompt("Ingrese el numero de la encuesta de la que desea ver los resultados:")) - 1;
   if (isNaN(encuestaIndex) || encuestaIndex < 0 || encuestaIndex >= encuestas.length) {
       console.log("Ingrese un numero valido de encuesta.");
       return;
   }
-  let encuesta = encuestas[encuestaIndex];
+  let encuesta = encuestas[encuestaIndex]; // Encuentra la encuesta y te muestra los resultados.
   console.log(`Resultados de la encuesta "${encuesta.nombre}":`);
   encuesta.preguntas.forEach((pregunta, index) => {
       console.log(`Pregunta ${index + 1}: ${pregunta.pregunta}`);
@@ -132,13 +132,13 @@ function eliminarEncuesta() {
       console.log("No hay encuestas disponibles para eliminar.");
       return;
   }
-  mostrarEncuestas();
+  mostrarEncuestas(); // Te muestra las encuestas disponibles para que elijas cual quieres eliminar.
   let encuestaIndex = parseInt(prompt("Ingrese el numero de la encuesta que desea eliminar:")) - 1;
   if (isNaN(encuestaIndex) || encuestaIndex < 0 || encuestaIndex >= encuestas.length) {
       console.log("Ingrese un numero valido de encuesta.");
       return;
   }
-  encuestas.splice(encuestaIndex, 1);
+  encuestas.splice(encuestaIndex, 1); // Elimina la encuesta que elegiste del array.
   console.log("Encuesta eliminada correctamente.");
 }
 

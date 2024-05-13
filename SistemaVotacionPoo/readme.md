@@ -1,6 +1,6 @@
 # Encuestas Interactivas
 
-Este es un programa interactivo en codigo JavaScript, basado en programacion funcional, para gestionar encuestas. Permite crear, mostrar, votar, mostrar resultados y eliminar encuestas.
+Este programa en codigo JavaScript, basado el programacion orientada a objetos (POO) que te permite gestionar encuestas de forma interactiva. Puedes crear nuevas encuestas, mostrar las existentes, votar en ellas, ver los resultados y eliminar encuestas.
 
 ## Funcionalidades
 
@@ -19,72 +19,70 @@ Este es un programa interactivo en codigo JavaScript, basado en programacion fun
 
 ```javascript
 // Crear una nueva encuesta
-crearEncuesta();
+menu.crearEncuesta();
 // Mostrar las encuestas disponibles
-mostrarEncuestas();
+menu.mostrarEncuestas();
 // Votar en una encuesta
-votarEncuesta();
+menu.votarEncuesta();
 // Mostrar resultados de una encuesta
-mostrarResultados();
+menu.mostrarResultados();
 // Eliminar una encuesta
-eliminarEncuesta();
+menu.eliminarEncuesta();
+```
+## Extracto de codigo para crear nueva encuesta.
 
+```JavaScript
+
+crearEncuesta() {
+      let nombreEncuesta = prompt("Ingrese el nombre de la encuesta:");
+      let nuevaEncuesta = new Encuesta(nombreEncuesta);
+
+      let cantPreguntas; // ingresar la cantidad de preguntas que tendra tu encuesta.
+      while (true) {
+          cantPreguntas = parseInt(prompt("Ingrese la cantidad de preguntas para la nueva encuesta:"));
+          if (!isNaN(cantPreguntas) && cantPreguntas > 0) {
+              break;
+          }
+          console.log("Ingrese un numero valido de preguntas.");
+      }
+
+      for (let i = 0; i < cantPreguntas; i++) {
+          let pregunta; // Ingresar cada pregunta.
+          while (true) {
+              pregunta = prompt(`Ingrese la pregunta ${i + 1}:`);
+              if (pregunta) {
+                  break;
+              }
+              console.log("La pregunta no puede estar vacia.");
+          }
+
+          let opciones; // Ingresar las opciones para cada pregunta.
+          while (true) {
+              opciones = prompt("Ingrese las opciones separadas por comas:").split(",");
+              if (opciones.length >= 2) {
+                  break;
+              }
+              console.log("Debe ingresar al menos dos opciones.");
+          }
+
+          nuevaEncuesta.agregarPregunta(pregunta, opciones);
+      }
+
+      this.encuestas.push(nuevaEncuesta); // Subir la encuesta.
+      console.log("Encuesta creada exitosamente.");
+  }
 ```
 
-## Fragmento de codigo.
+## Finalizar
 
-A continuacion se muestra un fragmento de codigo de ejemplo que ilustra como crear una nueva encuesta:
-
-``` javaScript
-// Crear una nueva encuesta
-function crearEncuesta() {
-let nombreEncuesta = prompt("Ingrese el nombre de la encuesta:");
-    let nuevaEncuesta = {
-        nombre: nombreEncuesta,
-        preguntas: []
-    };
-
-    let cantPreguntas; // cantidad de preguntas que tendra tu encuesta
-    while (true) {
-        cantPreguntas = parseInt(prompt("Ingrese la cantidad de preguntas para la nueva encuesta:"));
-        if (!isNaN(cantPreguntas) && cantPreguntas > 0) {
-            break;
-        }
-        console.log("Ingrese un numero valido de preguntas.");
-    }
-
-    for (let i = 0; i < cantPreguntas; i++) {
-        let pregunta; // ingresar cada pregunta.
-        while (true) {
-            pregunta = prompt(`Ingrese la pregunta ${i + 1}:`);
-            if (pregunta) {
-                break;
-            }
-            console.log("La pregunta no puede estar vacia.");
-        }
-
-        let opciones; // ingresar las opciones de cada pregunta.
-        while (true) {
-            opciones = prompt("Ingrese las opciones separadas por comas:").split(",");
-            if (opciones.length >= 2) {
-                break;
-            }
-            console.log("Debe ingresar al menos dos opciones.");
-        }
-
-        nuevaEncuesta.preguntas.push({ pregunta, opciones, votos: Array(opciones.length).fill(0) });
-    }
-
-    encuestas.push(nuevaEncuesta); // subir la encuesta.
-    console.log("Encuesta creada exitosamente.");
-}
-```
+Para finalizar el programa solo debes elegir la opcion 6 (Salir del programa) del menu principal.
 
 ## Contribuciones
 
 Si deseas contribuir a este proyecto, ¡sientete libre de hacerlo! Simplemente sigue estos pasos:
 
 Haz un fork del repositorio.
+
 Haz clic en el Botón "Fork": En la esquina superior derecha del repositorio, veras un boton llamado "Fork". Haz clic en este boton y GitHub comenzara a crear una copia del repositorio en tu cuenta.
 
 Crea una rama para modificarla a tu gusto (git checkout -b TuRama).
@@ -104,4 +102,4 @@ Una vez que hayas enviado la solicitud de extraccion, revisare tus cambios para 
 
 ## Licencia
 
-Este proyecto esta bajo la Licencia MIT.
+Este proyecto esta bajo la Licencia MIT. 
