@@ -31,7 +31,7 @@ function crearEncuesta() {
         if (!isNaN(cantPreguntas) && cantPreguntas > 0) {
             break;
         }
-        console.log("Ingrese un número válido de preguntas.");
+        console.log("Ingrese un numero valido de preguntas.");
     }
 
     for (let i = 0; i < cantPreguntas; i++) {
@@ -79,9 +79,9 @@ function votarEncuesta() {
       return;
   }
   mostrarEncuestas();
-  let encuestaIndex = parseInt(prompt("Ingrese el número de la encuesta en la que desea votar:")) - 1;
+  let encuestaIndex = parseInt(prompt("Ingrese el numero de la encuesta en la que desea votar:")) - 1;
   if (isNaN(encuestaIndex) || encuestaIndex < 0 || encuestaIndex >= encuestas.length) {
-      console.log("Ingrese un número válido de encuesta.");
+      console.log("Ingrese un numero valido de encuesta.");
       return;
   }
   let encuesta = encuestas[encuestaIndex];
@@ -98,7 +98,7 @@ function votarEncuesta() {
           pregunta.votos[votoIndex]++;
           console.log("Voto registrado correctamente.");
       } else {
-          console.log("Respuesta inválida, voto no registrado.");
+          console.log("Respuesta invalida, voto no registrado.");
       }
   });
 }
@@ -110,9 +110,9 @@ function mostrarResultados() {
       return;
   }
   mostrarEncuestas();
-  let encuestaIndex = parseInt(prompt("Ingrese el número de la encuesta de la que desea ver los resultados:")) - 1;
+  let encuestaIndex = parseInt(prompt("Ingrese el numero de la encuesta de la que desea ver los resultados:")) - 1;
   if (isNaN(encuestaIndex) || encuestaIndex < 0 || encuestaIndex >= encuestas.length) {
-      console.log("Ingrese un número válido de encuesta.");
+      console.log("Ingrese un numero valido de encuesta.");
       return;
   }
   let encuesta = encuestas[encuestaIndex];
@@ -133,9 +133,9 @@ function eliminarEncuesta() {
       return;
   }
   mostrarEncuestas();
-  let encuestaIndex = parseInt(prompt("Ingrese el número de la encuesta que desea eliminar:")) - 1;
+  let encuestaIndex = parseInt(prompt("Ingrese el numero de la encuesta que desea eliminar:")) - 1;
   if (isNaN(encuestaIndex) || encuestaIndex < 0 || encuestaIndex >= encuestas.length) {
-      console.log("Ingrese un número válido de encuesta.");
+      console.log("Ingrese un numero valido de encuesta.");
       return;
   }
   encuestas.splice(encuestaIndex, 1);
@@ -145,7 +145,7 @@ function eliminarEncuesta() {
 function main() { // menu principal
     let opcion;
     do {
-        console.log("----- Menú -----");
+        console.log("----- Menu -----");
         console.log("1. Crear encuesta");
         console.log("2. Mostrar encuestas");
         console.log("3. Votar en una encuesta");
@@ -153,7 +153,7 @@ function main() { // menu principal
         console.log("5. Eliminar encuesta");
         console.log("6. Salir del programa");
 
-        opcion = parseInt(prompt("Seleccione una opción:"));
+        opcion = parseInt(prompt("Seleccione una opcion:"));
         switch (opcion) {
             case 1:
                 crearEncuesta();
@@ -174,7 +174,7 @@ function main() { // menu principal
                 console.log("Saliendo del programa...");
                 break;
             default:
-                console.log("Opción no válida. Por favor, seleccione una opción válida.");
+                console.log("Opcion no valida. Por favor, seleccione una opcion valida.");
         }
         console.log("<======================================>"); // Define el termino del proceso
     } while (opcion !== 6); //mientras la opcion elegida no sea 6, continua en el menu principal
