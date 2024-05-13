@@ -31,7 +31,7 @@ eliminarEncuesta();
 
 ```
 
-##Código de Ejemplo
+## Fragmento de codigo.
 
 A continuacion se muestra un fragmento de codigo de ejemplo que ilustra como crear una nueva encuesta:
 
@@ -80,7 +80,7 @@ let nombreEncuesta = prompt("Ingrese el nombre de la encuesta:");
 }
 ```
 
-##Contribuciones
+## Contribuciones
 
 Si deseas contribuir a este proyecto, ¡sientete libre de hacerlo! Simplemente sigue estos pasos:
 
@@ -102,6 +102,6 @@ Una vez que hayas completado todos los detalles, haz clic en el boton verde "Cre
 
 Una vez que hayas enviado la solicitud de extraccion, revisare tus cambios para decidir si deseo fusionarlos en el codigo principal.
 
-##Licencia
+## Licencia
 
 Este proyecto esta bajo la Licencia MIT.
