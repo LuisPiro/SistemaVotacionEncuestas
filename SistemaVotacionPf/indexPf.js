@@ -180,4 +180,4 @@ function main() { // menu principal
     } while (opcion !== 6); //mientras la opcion elegida no sea 6, continua en el menu principal
 }
 
-main(); // vuelve al menu principal a menos que la eleccion sea salir del progrma
+main(); // vuelve al menu principal a menos que la eleccion sea salir del programa
