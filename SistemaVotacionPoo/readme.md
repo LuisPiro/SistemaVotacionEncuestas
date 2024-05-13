@@ -75,9 +75,11 @@ crearEncuesta() {
   }
 ```
 
-## Finalizar
+## Finalizar e iniciar.
 
-Para finalizar el programa solo debes elegir la opcion 6 (Salir del programa) del menu principal.
+Para finalizar el programa solo debes usar la opcion 6 del programa para salir de el.
+
+Para iniciar el programa solo debes escribir en la consola "main()" y vuelve a comenzar.
 
 ## Contribuciones
 
