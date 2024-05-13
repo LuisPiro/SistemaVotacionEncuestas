@@ -92,7 +92,7 @@ Para iniciar el programa solo debes escribir en la consola "menu.iniciar()" y vu
 Si deseas contribuir a este proyecto, ¡sientete libre de hacerlo! Simplemente sigue estos pasos:
 
 Haz un fork del repositorio.
-Haz clic en el Botón "Fork": En la esquina superior derecha del repositorio, veras un boton llamado "Fork". Haz clic en este boton y GitHub comenzara a crear una copia del repositorio en tu cuenta.
+Haz clic en el Boton "Fork": En la esquina superior derecha del repositorio, veras un boton llamado "Fork". Haz clic en este boton y GitHub comenzara a crear una copia del repositorio en tu cuenta.
 
 Crea una rama para modificarla a tu gusto (git checkout -b TuRama).
 Realiza tus cambios.
