@@ -29,6 +29,8 @@ mostrarResultados();
 // Eliminar una encuesta
 eliminarEncuesta();
 
+```
+
 ##Código de Ejemplo
 
 A continuacion se muestra un fragmento de codigo de ejemplo que ilustra como crear una nueva encuesta:
