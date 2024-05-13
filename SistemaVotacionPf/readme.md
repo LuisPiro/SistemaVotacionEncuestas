@@ -1,3 +1,5 @@
+![banner](banner.png)
+
 # Encuestas Interactivas
 
 Este es un programa interactivo en codigo JavaScript, basado en programacion funcional, para gestionar encuestas. Permite crear, mostrar, votar, mostrar resultados y eliminar encuestas.
@@ -105,3 +107,5 @@ Una vez que hayas enviado la solicitud de extraccion, revisare tus cambios para 
 ## Licencia
 
 Este proyecto esta bajo la Licencia MIT.
+
+# ¡Gracias por usar PyTechnology!

@@ -1,3 +1,5 @@
+![banner](banner.png)
+
 # Encuestas Interactivas
 
 Este programa en codigo JavaScript, basado el programacion orientada a objetos (POO) que te permite gestionar encuestas de forma interactiva. Puedes crear nuevas encuestas, mostrar las existentes, votar en ellas, ver los resultados y eliminar encuestas.
@@ -102,4 +104,6 @@ Una vez que hayas enviado la solicitud de extraccion, revisare tus cambios para 
 
 ## Licencia
 
-Este proyecto esta bajo la Licencia MIT. 
+Este proyecto esta bajo la Licencia MIT.
+
+# ¡Gracias por usar PyTechnology!
