@@ -85,7 +85,7 @@ let nombreEncuesta = prompt("Ingrese el nombre de la encuesta:");
 
 Para finalizar el programa solo debes usar la opcion 6 del programa para salir de el.
 
-Para iniciar el programa solo debes escribir en la consola "menu.iniciar()" y vuelve a comenzar.
+Para iniciar el programa solo debes escribir en la consola "main()" y vuelve a comenzar.
 
 ## Contribuciones
 
